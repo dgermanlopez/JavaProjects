@@ -1,7 +1,6 @@
 package com.dlopez.business.naat;
 
 import java.io.Serializable;
-import java.util.Date;
 import java.util.List;
 
 public class NAATInParameter implements Serializable {
