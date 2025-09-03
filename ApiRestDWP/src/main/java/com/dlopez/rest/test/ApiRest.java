@@ -119,6 +119,11 @@ public class ApiRest extends Application {
 			out.setMessage("creditLinePartitions Required");
 			return ApiUtils.resposeBadRequest(out);
 		}
+		if (inParameter.getAccountId() == null) {
+			out.setCode("APIKIT:BAD_REQUEST");
+			out.setMessage("account Required");
+			return ApiUtils.resposeBadRequest(out);
+		}
 
 		NAATCreditLinePartitionInfo creditLinePartition = inParameter.getCreditLinePartitions().get(0)
 				.getCreditLinePartition();
@@ -144,7 +149,7 @@ public class ApiRest extends Application {
 		}
 		if (creditLinePartition.getDescCrLinePartitionType() == null) {
 			out.setCode("APIKIT:BAD_REQUEST");
-			out.setMessage("currencyId Required");
+			out.setMessage("descCrLinePartitionType Required");
 			return ApiUtils.resposeBadRequest(out);
 		}
 

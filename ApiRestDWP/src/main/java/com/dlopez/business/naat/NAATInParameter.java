@@ -16,6 +16,7 @@ public class NAATInParameter implements Serializable {
 	private List<NAATCreditLinePartition> creditLinePartitions;
 	private String billingDate;
 	private String paymentDate;
+	private Long accountId;
 
 	public Long getApplicationId() {
 		return applicationId;
@@ -87,5 +88,13 @@ public class NAATInParameter implements Serializable {
 
 	public void setPaymentDate(String paymentDate) {
 		this.paymentDate = paymentDate;
+	}
+
+	public Long getAccountId() {
+		return accountId;
+	}
+
+	public void setAccountId(Long accountId) {
+		this.accountId = accountId;
 	}
 }
